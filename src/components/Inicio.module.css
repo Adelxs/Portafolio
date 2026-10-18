@@ -1,0 +1,268 @@
+/* Inicio.module.css */
+
+/* ── LAYOUT ──────────────────────────────────────────────────────────────────── */
+.inicio {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  background-color: var(--bg-page);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* ── HERO ────────────────────────────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  min-height: 70vh;
+}
+
+/* ── TEXTO HERO ──────────────────────────────────────────────────────────────── */
+.heroTexto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.saludo {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.nombre {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* ── TYPING ──────────────────────────────────────────────────────────────────── */
+.rolWrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 2rem;
+}
+
+.rol {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  color: var(--color-demo);
+}
+
+.cursor {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-demo);
+  animation: blink 1s step-end infinite;
+  line-height: 1;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── DESCRIPCIÓN ─────────────────────────────────────────────────────────────── */
+.descripcion {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0;
+}
+
+/* ── CTAs ────────────────────────────────────────────────────────────────────── */
+.ctas {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.ctaPrimario {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+ background: var(--btn-bg);
+color: var(--btn-text);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ctaPrimario:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.ctaSecundario {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ctaSecundario:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+/* ── STATS ───────────────────────────────────────────────────────────────────── */
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.statValor {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── DECORACIÓN (code card) ──────────────────────────────────────────────────── */
+.heroDecor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.codeCard {
+  background: #0f172a;
+  border-radius: 14px;
+  padding: 0;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.codeCardHeader {
+  display: flex;
+  gap: 6px;
+  padding: 0.75rem 1rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  font-family: 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Colores de syntax básicos */
+.codeBlock {
+  color: #94a3b8;
+}
+
+/* ── PROYECTOS CTA ───────────────────────────────────────────────────────────── */
+.proyectosCta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  flex-wrap: wrap;
+}
+
+.proyectosCtaTexto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 220px;
+}
+
+.proyectosCtaTitulo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.proyectosCtaDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: unset;
+    gap: 2rem;
+  }
+
+  .heroDecor {
+    order: -1;
+  }
+
+  .codeCard {
+    max-width: 100%;
+  }
+
+  .inicio {
+    gap: 3rem;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .proyectosCta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .stats {
+    gap: 1.25rem;
+  }
+}

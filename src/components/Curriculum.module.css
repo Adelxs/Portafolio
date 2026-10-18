@@ -1,0 +1,265 @@
+/*
+  Curriculum.module.css
+  Variables alineadas con el mismo sistema de Portafolio.module.css
+  para que el tema claro/oscuro funcione en toda la app con una sola variable.
+*/
+
+/* ── LAYOUT PRINCIPAL ────────────────────────────────────────────────────────── */
+.curriculum {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  background-color: var(--bg-page);
+}
+
+/* ── ENCABEZADO ──────────────────────────────────────────────────────────────── */
+.header {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.subtitulo {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  padding: 0.45rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--btn-bg);
+color: var(--btn-text);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.downloadBtn:hover {
+  opacity: 0.85;
+}
+
+/* ── TABS ────────────────────────────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tabActiva {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-primary);
+}
+
+/* ── SECTION TITLE ───────────────────────────────────────────────────────────── */
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem;
+}
+
+/* ── TIMELINE ────────────────────────────────────────────────────────────────── */
+.timeline {
+  position: relative;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+/* Línea vertical */
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.timelineLast::before {
+  display: none;
+}
+
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.timelineHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timelineCargo {
+  font-weight: 600;
+  font-size: 0.975rem;
+  color: var(--text-primary);
+}
+
+.timelinePeriodo {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.timelineEmpresa {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.timelineLugar {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.timelineDesc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0.2rem 0 0;
+}
+
+/* ── STACK BADGES (compartido) ───────────────────────────────────────────────── */
+.stackList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.stackBadge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--bg-badge-stack);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+/* ── TECNOLOGÍAS ─────────────────────────────────────────────────────────────── */
+.techGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.techCategoria {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.techCategoriaTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── CERTIFICACIONES ─────────────────────────────────────────────────────────── */
+.certList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.certItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.certItem svg {
+  color: var(--color-terminado);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .curriculum {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  .timelineHeader {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .tabs {
+    gap: 0;
+  }
+
+  .tab {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+  }
+}

@@ -1,0 +1,122 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   index.css
+   Solo estilos GLOBALES aquí. Los estilos de componentes van en sus .module.css
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ── TEMA CLARO (por defecto) ─────────────────────────────────────────────── */
+:root {
+  /* Fondos */
+  --bg-page:             #f8fafc;
+  --bg-header:           #ffffff;
+  --bg-card:             #ffffff;
+  --bg-card-hover:       #f1f5f9;
+  --bg-badge-stack:      #e2e8f0;
+  --bg-badge-terminado:  #dcfce7;
+  --bg-badge-desarrollo: #fef9c3;
+
+  /* Textos */
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
+
+  /* Acento (links activos, typing, hover nav) */
+  --color-accent:  #fa4529;
+
+  /* Estados */
+  --color-terminado:      #16a34a;
+  --color-desarrollo:     #ca8a04;
+  --color-dot-terminado:  #22c55e;
+  --color-dot-desarrollo: #eab308;
+
+  /* Botones */
+  --color-github:       #0f172a;
+  --color-github-hover: #1e293b;
+  --color-demo:         #2563eb;
+  --color-demo-hover:   #1d4ed8;
+
+  /* Bordes y sombras */
+  --border-color:      #e2e8f0;
+  --border-radius-card:  12px;
+  --border-radius-badge:  6px;
+  --shadow-card:       0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 8px 30px rgba(0,0,0,0.12);
+
+  --transition: 0.2s ease;
+
+  --btn-bg: #0f172a;
+  --btn-text: #ffffff;
+}
+
+/* ── TEMA OSCURO ──────────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-page:             #0f172a;
+  --bg-header:           #0f172a;
+  --bg-card:             #1e293b;
+  --bg-card-hover:       #273549;
+  --bg-badge-stack:      #334155;
+  --bg-badge-terminado:  #14532d;
+  --bg-badge-desarrollo: #713f12;
+
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #64748b;
+
+  --color-accent: #ff6b52;
+
+  --color-terminado:      #4ade80;
+  --color-desarrollo:     #facc15;
+  --color-dot-terminado:  #4ade80;
+  --color-dot-desarrollo: #facc15;
+
+  --color-github:       #f1f5f9;
+  --color-github-hover: #e2e8f0;
+  --color-demo:         #60a5fa;
+  --color-demo-hover:   #93c5fd;
+
+  --border-color:      #334155;
+  --shadow-card:       0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+  --shadow-card-hover: 0 8px 30px rgba(0,0,0,0.4);
+
+  --btn-bg: #f1f5f9;
+  --btn-text: #0f172a;
+}
+
+/* ── RESET Y BASE GLOBAL ──────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* ── LAYOUT GLOBAL ────────────────────────────────────────────────────────── */
+.content {
+  min-height: 400px;
+}
+
+/* ── FOOTER GLOBAL ────────────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 35px;
+  border-top: 2px solid var(--border-color);
+  background: var(--bg-card);
+  min-height: 100px;
+  line-height: 100px;
+  color: var(--text-muted);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
